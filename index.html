@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#edf1ed" />
+    <meta name="description" content="Explore um escritório de desenvolvimento de software em 3D com joystick, teclado ou controle." />
+    <title>Escritório de desenvolvimento</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <main id="app">
+      <canvas id="world" tabindex="0" aria-label="Escritório de desenvolvimento em 3D. Use WASD para caminhar e arraste para olhar ao redor."></canvas>
+      <div id="joystick" role="group" tabindex="0" aria-label="Joystick de movimento. Arraste para caminhar ou use as teclas WASD.">
+        <span class="stick-arrow up" aria-hidden="true"></span>
+        <span class="stick-arrow right" aria-hidden="true"></span>
+        <span class="stick-arrow down" aria-hidden="true"></span>
+        <span class="stick-arrow left" aria-hidden="true"></span>
+        <div class="joystick-inner" aria-hidden="true"></div>
+        <div id="stick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18M9 6l3-3 3 3M9 18l3 3 3-3M6 9l-3 3 3 3m12-6 3 3-3 3" /></svg></div>
+      </div>
+      <div id="loading" role="status" aria-label="Carregando ambiente"><span class="loader" aria-hidden="true"></span></div>
+      <button id="retry" hidden aria-label="Erro ao renderizar o ambiente. Recarregar a página."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10a9 9 0 1 1 2 8M3 4v6h6" /></svg></button>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
