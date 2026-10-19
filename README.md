@@ -20,6 +20,10 @@ npm run dev
 No PowerShell com scripts desativados, use `npm.cmd install` e `npm.cmd run dev`.
 Abra a URL local exibida pelo Vite. Para gerar os arquivos estáticos em `dist/`, execute `npm run build`. Para testar a física, execute `npm test`.
 
+## Publicar no GitHub Pages
+
+Em **Settings → Pages → Source**, selecione **GitHub Actions**. O arquivo `.github/workflows/publicar.yml` instala as dependências, roda os testes e publica a pasta `dist` sempre que a branch `main` recebe uma atualização. Publicar a raiz do código diretamente não funciona, porque o navegador precisa dos arquivos compilados pelo Vite.
+
 ## Controles
 
 - Joystick na tela ou W/A/S/D: caminhar. É possível mover o joystick e arrastar a cena ao mesmo tempo em telas multitoque.
